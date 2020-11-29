@@ -6,13 +6,15 @@ class Dustbin{
       World.add(world,this.body)  
       this.w = width
     this.h = height
-    this.image = loadImage("sprites/dustbingreen.png");
+    this.image = loadImage("dustbingreen.png");
     }
     display(){
     push()
     fill("red")
-     rectMode(CENTER)   
-    rect(this.body.position.x,this.body.position.y,this.w,this.h)
+     rectMode(CENTER)
+     imageMode(CENTER)   
+     image(this.image,this.body.position.x,this.body.position.y,this.r,this.r);
+   //rect(this.body.position.x,this.body.position.y,this.w,this.h)
     pop()
     }
     }

@@ -32,13 +32,11 @@ ground = new Ground(400,690,800,20);
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background("white");
   
   drawSprites();
 
   dustbin.display();
-  dustbin2.display();
-  dustbin3.display();
   paper.display();
   ground.display();
 }
@@ -47,7 +45,7 @@ function keyPressed(){
 
 if(keyCode===UP_ARROW){
 
-Matter.Body.applyForce(paper.body,paper.body.position,{x:15,y:-15})
+Matter.Body.applyForce(paper.body,paper.body.position,{x:150,y:-600})
 	}
 }
 
